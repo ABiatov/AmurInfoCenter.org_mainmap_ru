@@ -9,14 +9,14 @@ map.options.maxZoom = 6;
 
 /* Basemap Layers */
 
-
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+        L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+			continuousWorld: true,
             maxZoom: 18,
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
                 '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                'Imagery Â© <a href="http://mapbox.com">Mapbox</a>',
-            id: 'mapbox.light'
-        }).addTo(map);
+                'Imagery &copy; <a href="http://carto.com">CARTO</a>',
+        }).addTo(map);        
+
 
 /* Overlay Layer from GeoJSON */
             var kvartallayer = L.geoJson(null, {
@@ -78,4 +78,4 @@ map.options.maxZoom = 6;
             });
 
 
-map.attributionControl.addAttribution('| <a href="http://wwf.ru" target="_blank">WWF Russia Amur-branch</a>| Created by <a href="https://www.facebook.com/biatovanton" target="_blank">Biatov Anton</a> |');
+map.attributionControl.addAttribution('| <a href="http://wwf.ru" target="_blank">WWF Russia Amur-branch</a>| Created by <a href="https://abiatov.github.io" target="_blank">Biatov Anton</a> |');
